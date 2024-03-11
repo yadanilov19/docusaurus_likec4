@@ -1,0 +1,7 @@
+model {
+  // cloud is defined in landscape.c4
+  extend cloud {
+    // here we define cloud.service1
+    records = service 'Records' 'test'
+  }
+}

@@ -1,0 +1,13 @@
+model {
+  // cloud is defined in landscape.c4
+  extend cloud {
+    // define cloud.service2
+    service2 = service 'Some Service 2' {
+ 
+      -> records 'delegates some work' // ✅ service1 is known inside 'cloud', 
+                                        //    and resolved even defined in another file 
+    }
+  }
+ 
+  service2 -> cloud.monolith // ✅ OK: Resolved by fully qualified name
+}

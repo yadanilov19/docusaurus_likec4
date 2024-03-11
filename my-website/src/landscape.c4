@@ -1,0 +1,10 @@
+model {
+  customer = actor 'Customer'
+  cloud = system 'Cloud System'
+}
+views {
+  view index of cloud {
+    title "Cloud System - Landscape"
+    include *
+  }
+}
